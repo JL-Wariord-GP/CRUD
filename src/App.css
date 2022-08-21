@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Padauk', sans-serif;
+    font-family: 'PT Sans', sans-serif;
+    transition: all .3s ease-in-out;
+}
+a, p{
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    
+}
+
+img {
+    width: 185px;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    
+    transition: all 300ms;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    list-style: none;
+    line-height: 1.8;
+    padding: 25px;
+    box-shadow: 0px 20px 5px 6px #0000003b;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 550px;
+    height: 200px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in;
+}
+
+ul li {
+    list-style: none;
+}
+
+button {
+   border-style: none;
+}
+
+.container__header{
+    max-width: 1200px;
+    height: 100%;  
+    display: flex;
+    justify-content: space-between; 
+    margin: auto;
+    padding: 0px 20px;
+}
+
+.container__header_img_btn {
+    display: flex;
+    width: 100%;
+}
+
+.container__nav{
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav_mod{
+    height: 100px;
+    box-shadow: 1px 1px 10px 0px #000000;
+    background: white;
+}
+
+.btn__nav{
+    width: 180px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #378ad4;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    transition: .3s ease-in all;
+    box-shadow: 0px 8px 5px 6px #0000003b;
+}
+
+.btn__openform{
+    background-color: #378bd400;
+    cursor: pointer;
+    color: #fff;
+    margin: 5px;
+    transition: .3s ease-in all;
+}
+
+.btn__nav:hover {
+    background-color: #1f5381;
+    transition: .3s ease-in all;
+}
+
+.style__span__nav {
+    font-size: 25px;
+    margin: 5px;
+    position: relative;
+    left: 3px;
+}
+
+/*!==================== USERSFORM ====================*/
+
+.title__form {
+    font-size: 35px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 15rem;
+    font-family: 'Dancing Script', cursive;
+}
+
+.title__span {
+    color: #1f44b2;
+}
+
+.container__form {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    transform: translateY(0);  
+}
+
+.form__none {
+    display: block;
+    pointer-events: none;
+    inset: 0;
+    animation: fade-out 3000ms forwards;
+    position: fixed;
+    z-index: 10000;
+}
+
+.container__form {
+    animation: show 1s backwards ; 
+}
+
+@keyframes show {
+    0% {
+        transform: translateY(-150vh);
+    }
+}
+
+@keyframes fade-out {
+    100% {
+        transform: translateY(-150vh);
+    }
+  }
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 50px;
+    width: 100%;
+}
+
+.container__main__create {
+    background-color: #fff;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 4.5rem 3em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 / 30%);
+    text-align: center;
+}
+
+.form__title {
+    font-size: 2rem;
+    margin-bottom: .5em;
+}
+
+.form__container {
+    margin-top: 3em;
+    display: grid;
+    gap: 2.5em;
+}
+
+.form__group {
+    position: relative;
+    --color: #5757577e;
+    list-style: none;
+}
+
+.form__input {
+    width: 100%;
+    background: none;
+    color: #706c6c;
+    font-size: 1rem;
+    padding: .8em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown) + .form__label{
+    transform: translateY(12px) scale(0);
+    transform-origin: left top;
+    color: #3866f2;
+    position: absolute;
+    top: -8px;
+}
+
+.form__label {
+    color: var(--color);
+    font-size: 12px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(12px);
+    transition: transform .5s, color .3s;
+}
+
+
+.form__line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #3866f2;
+    transform: scale(0);
+    transform: left bottom;
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown) + .form__label {
+    transform: scale(1);
+}
+
+.form__submit {
+   width: 100%;
+   display: flex;
+   justify-content: flex-end;
+   gap: 1em;
+}
+
+.form_btn {
+    width: 90px;
+    height: 25px;
+    border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    transition: .3s ease-in;
+}
+
+
+.form__submit__create {
+    background-color: #3866f2;
+}
+
+.form__submit__create:hover {
+    background-color: #1f44b2;
+    transition: .3s ease-in;
+}
+
+.form__submit__close {
+    background-color: #6c757d;
+}
+
+.form__submit__close:hover {
+    background-color: #54595e;
+    transition: .3s ease-in;
+}
+
+/*!==================== CARDUSERS ====================*/
+
+.box-cards-app {
+    position: relative;
+    top: 200px;
+    max-width: 1200px;
+    margin: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card__title {
+    font-size: 22px;
+    font-family: 'Padauk', sans-serif;
+}
+
+.card__email {
+    font-size: 18px;
+    color: #706c6c;
+}
+
+.card__birthday {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.card__box__pass__img {
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+}
+
+.card__password__img {
+    width: 15px;
+    cursor: pointer;
+}
+
+.btn__eye__img {
+    width: 20px;
+    height: 16px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 8px 3px #0000003b;
+    transition: transform 0.4s ease-in;
+}
+
+.btn__eye__img:hover {
+    transition: transform 0.4s ease-in;
+    transform: scale(1.2);
+}
+
+.btn__del__upd {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+    width: 100%;
+}
+
+.btn__del, .btn__upd {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    box-shadow: 0px 5px 8px 3px #0000003b;
+    transition: transform 0.3s ease-in;
+}
+
+.btn__del:hover {
+    cursor: pointer;
+    transition: transform 0.3s ease-in;
+    transform: scale(1.09);
+}
+
+.btn__upd:hover {
+    cursor: pointer;
+    transition: transform 0.3s ease-in;
+    transform: scale(1.09);
+}
+
+/*!==================== RESPONSIVE ====================*/
+@media (max-width: 390px) {
+    img {
+        width: 150px;
+    }
+    ul {
+        width: 340px;
+    }
+}
+
+@media (min-width: 480px) {
+    ul {
+        width: 370px;
+    }
+
+    .card__title {
+        font-size: 18px;
+    }
+    
+    .card__email {
+        font-size: 16px;
+    }
+
+    .card__birthday {
+        font-size: 14px;
+    }
+
+    .car__password {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 590px) {
+    ul {
+        width: 370px;
+    }
+
+}
+
+@media (min-width: 600px) {
+    ul {
+        width: 480px;
+    }
+}
+
+@media (min-width: 900px) {
+    ul {
+        width: 500px;
+    }
+}
+
+@media (min-width: 1200px) {
+    ul {
+        width: 700px;
+    }
+}
+
+/*!====== lOADER INDEX ======*/
+
+.index__img__loading {
+    width: 90%;
+}
+
+.loader {
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 100000;
+    clip-path: circle(150% at 100% 0);
+    transition: clip-path 0.9s ease-out;
+}
+
+.loader2 {
+    clip-path: circle(0.5% at 100% 0);
+}
+
+@media (min-width: 1200px) {
+    .index__img__loading {
+        width: 50%;
+    }
+}
