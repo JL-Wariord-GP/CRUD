@@ -4,12 +4,15 @@ import './App.css'
 import CardUsers from './components/CardUsers'
 import UsersForm from './components/UsersForm'
 
+
 function App() {
   
   const [users, setUsers] = useState()
   const [update, setUpdate] = useState()
   const [openForm, setOpenForm] = useState(false)
 
+
+  
   {
     //! API LOGIC
   }
@@ -30,7 +33,7 @@ function App() {
   
   return (
     <div className="App">
-    <header id="header">
+    <header id='header' >
         <div className="container__header">
             <div className="logo">
                 <img src="https://fabianespinosa.github.io/OVIunadFabianEspinosa/images/crud1.png" alt="Logo"/>
