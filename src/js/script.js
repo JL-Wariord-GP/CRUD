@@ -1,5 +1,6 @@
 const modal = document.querySelector("#formContainer");
 const closeModal = document.querySelector(".close-button");
+
 window.onscroll = function(){
     scroll = document.documentElement.scrollTop;
     header = document.getElementById("header");

@@ -30,7 +30,7 @@ function App() {
   
   return (
     <div className="App">
-      <header id="header">
+    <header id="header">
         <div className="container__header">
             <div className="logo">
                 <img src="https://fabianespinosa.github.io/OVIunadFabianEspinosa/images/crud1.png" alt="Logo"/>
