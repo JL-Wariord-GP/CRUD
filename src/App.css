@@ -5,32 +5,38 @@ html {
     box-sizing: border-box;
     scroll-snap-type: y mandatory;
 }
-*, *:before, *:after {
-    box-sizing: border-box;
-  }
 
-*{
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-family: 'Padauk', sans-serif;
     font-family: 'PT Sans', sans-serif;
     transition: all .3s ease-in-out;
 }
-a, p{
+
+a,
+p {
     text-decoration: none;
     font-family: 'Quicksand', sans-serif;
-    
+
 }
 
 img {
     width: 185px;
 }
 
-header{
+header {
     width: 100%;
     height: 100px;
     font-family: 'Poppins', sans-serif;
@@ -64,14 +70,14 @@ ul li {
 }
 
 button {
-   border-style: none;
+    border-style: none;
 }
 
-.container__header{
+.container__header {
     max-width: 1200px;
-    height: 100%;  
+    height: 100%;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     margin: auto;
     padding: 0px 20px;
 }
@@ -81,20 +87,20 @@ button {
     width: 100%;
 }
 
-.container__nav{
+.container__nav {
     position: relative;
     height: 100%;
     display: flex;
     align-items: center;
 }
 
-.nav_mod{
+.nav_mod {
     height: 100px;
     box-shadow: 1px 1px 10px 0px #000000;
     background: white;
 }
 
-.btn__nav{
+.btn__nav {
     width: 180px;
     height: 50px;
     display: flex;
@@ -109,7 +115,7 @@ button {
     box-shadow: 0px 8px 5px 6px #0000003b;
 }
 
-.btn__openform{
+.btn__openform {
     background-color: #378bd400;
     cursor: pointer;
     color: #fff;
@@ -153,7 +159,7 @@ button {
     background: rgba(0, 0, 0, .5);
     backdrop-filter: blur(5px);
     z-index: 1000;
-    transform: translateY(0);  
+    transform: translateY(0);
 }
 
 .form__none {
@@ -166,7 +172,7 @@ button {
 }
 
 .container__form {
-    animation: show 1s backwards ; 
+    animation: show 1s backwards;
 }
 
 @keyframes show {
@@ -179,7 +185,7 @@ button {
     100% {
         transform: translateY(-150vh);
     }
-  }
+}
 
 form {
     display: flex;
@@ -231,8 +237,8 @@ form {
     font-family: 'Open Sans', sans-serif;
 }
 
-.form__input:focus + .form__label,
-.form__input:not(:placeholder-shown) + .form__label{
+.form__input:focus+.form__label,
+.form__input:not(:placeholder-shown)+.form__label {
     transform: translateY(12px) scale(0);
     transform-origin: left top;
     color: #3866f2;
@@ -263,16 +269,16 @@ form {
     transform: left bottom;
 }
 
-.form__input:focus ~ .form__label,
-.form__input:not(:placeholder-shown) + .form__label {
+.form__input:focus~.form__label,
+.form__input:not(:placeholder-shown)+.form__label {
     transform: scale(1);
 }
 
 .form__submit {
-   width: 100%;
-   display: flex;
-   justify-content: flex-end;
-   gap: 1em;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
 }
 
 .form_btn {
@@ -365,7 +371,8 @@ form {
     width: 100%;
 }
 
-.btn__del, .btn__upd {
+.btn__del,
+.btn__upd {
     width: 40px;
     height: 40px;
     border-radius: 100%;
@@ -390,6 +397,7 @@ form {
     img {
         width: 150px;
     }
+
     ul {
         width: 340px;
     }
@@ -403,7 +411,7 @@ form {
     .card__title {
         font-size: 18px;
     }
-    
+
     .card__email {
         font-size: 16px;
     }
@@ -444,10 +452,6 @@ form {
 
 /*!====== lOADER INDEX ======*/
 
-.index__img__loading {
-    width: 90%;
-}
-
 .loader {
     background-color: #fff;
     width: 100%;
@@ -465,8 +469,26 @@ form {
     clip-path: circle(0.5% at 100% 0);
 }
 
+/* Pantallas grandes (mayores o iguales a 1200px) */
 @media (min-width: 1200px) {
     .index__img__loading {
         width: 50%;
+        /* Establece el tamaño al 90% */
+    }
+}
+
+/* Pantallas medianas (entre 768px y 1199px) - Puedes ajustar estos valores según tus necesidades */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .index__img__loading {
+        width: 45%;
+        /* Ajusta el tamaño según tus preferencias */
+    }
+}
+
+/* Pantallas pequeñas (menores a 768px) */
+@media (max-width: 767px) {
+    .index__img__loading {
+        width: 90%;
+        /* Reduce aún más el tamaño para dispositivos móviles */
     }
 }
