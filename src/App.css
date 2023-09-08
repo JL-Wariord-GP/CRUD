@@ -32,13 +32,26 @@ p {
 
 }
 
-img {
-    width: 185px;
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.logo-img {
+    width: 50%;
+    /* Establece el ancho al 100% del contenedor padre */
+    max-width: 200px;
+    /* Opcional: establece un ancho máximo para el logo */
+    height: auto;
+    /* Permite que la altura se ajuste automáticamente */
+    border-radius: 50px;
+}
+
 
 header {
     width: 100%;
-    height: 100px;
+    height: 105px;
     font-family: 'Poppins', sans-serif;
     position: fixed;
     top: 0;

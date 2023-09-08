@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import CardUsers from './components/CardUsers'
 import UsersForm from './components/UsersForm'
+import Logo from './assets/Logo-jorge-Drag.jpg'
 
 
 function App() {
@@ -36,7 +37,7 @@ function App() {
     <header id='header' >
         <div className="container__header">
             <div className="logo">
-                <img src="https://fabianespinosa.github.io/OVIunadFabianEspinosa/images/crud1.png" alt="Logo"/>
+                <img src={Logo} className='logo-img' alt="Logo"/>
             </div>
             <div className="container__nav">
                 <nav id="nav">
