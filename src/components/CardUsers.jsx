@@ -26,7 +26,7 @@ const CardUsers = ({user, getUsers, setUpdate, handleOpenForm}) => {
                 'Your record has been deleted.',
                 'success'
               )
-              const URL = `https://users-crud1.herokuapp.com/users/${user.id}/`
+              const URL = `https://crud-users-l6b4.onrender.com/api/users/${user._id}/`
                 axios.delete(URL)
                 .then(res => getUsers())
                 .catch(error => console.log(error))
@@ -75,15 +75,15 @@ const CardUsers = ({user, getUsers, setUpdate, handleOpenForm}) => {
   return (
     <main className='box__card'>
         <ul>
-            <li className='card__title'>{`${user['first_name']} ${user['last_name']}`}</li>
+            <li className='card__title'>{`${user['name']} ${user['lastName']}`}</li>
             <li className='card__email'>{user.email}</li>
-            <li className='card__birthday'>{user.birthday}</li>
+            <li className='card__birthday'>{user.registrationDate}</li>
             <div className='card__box__pass__img'>
                 <li className='card__password'>{eyeUsers ? `${user.password}` : '**********'}</li>   
                 <button className='btn__eye__img' onClick={handleEye}><img className='card__password__img' src={eye} /></button>
             </div>
             <div className='btn__del__upd'>
-                <button onClick={() => {deleteUsers(user.id)}} className='btn__del'>
+                <button onClick={() => {deleteUsers(user._id)}} className='btn__del'>
                     <box-icon name='trash' type='solid' color='#ff0000'></box-icon>
                 </button>
                 <button onClick={getUpdate} className='btn__upd'>

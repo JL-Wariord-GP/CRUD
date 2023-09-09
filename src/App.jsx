@@ -12,17 +12,17 @@ function App() {
   const [update, setUpdate] = useState()
   const [openForm, setOpenForm] = useState(false)
 
-
   
   {
     //! API LOGIC
   }
 
   const getUsers = () => {
-    const URL = 'https://users-crud1.herokuapp.com/users/'
+    const URL = 'https://crud-users-l6b4.onrender.com/api/users/'
     axios.get(URL)
     .then(res => setUsers(res.data))
     .catch(error => console.log(error))
+    console.log();
   }
 
   useEffect(() => {
@@ -66,7 +66,7 @@ function App() {
         {
           users?.map(user =>(
             <CardUsers 
-            key={user.id}
+            key={user._id}
             user={user}
             getUsers={getUsers}
             setUpdate={setUpdate}
